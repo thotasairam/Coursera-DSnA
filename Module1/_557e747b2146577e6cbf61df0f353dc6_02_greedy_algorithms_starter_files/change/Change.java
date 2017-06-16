@@ -2,7 +2,18 @@ import java.util.Scanner;
 
 public class Change {
     private static int getChange(int m) {
-        //write your code here
+        String in = m + "";
+        String tens = in.substring(0,in.length()-1);
+        String units = in.substring(in.length()-1);
+        m = 0 + Integer.parseInt(tens);
+
+        if(Integer.parseInt(units) >= 5){
+            m = m + 1 + (Integer.parseInt(units)%5);
+        }
+        else{
+            m = m + Integer.parseInt(units);
+        }
+
         return m;
     }
 
