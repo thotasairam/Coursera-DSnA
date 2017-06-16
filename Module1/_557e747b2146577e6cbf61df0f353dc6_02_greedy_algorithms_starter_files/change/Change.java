@@ -3,9 +3,16 @@ import java.util.Scanner;
 public class Change {
     private static int getChange(int m) {
         String in = m + "";
-        String tens = in.substring(0,in.length()-1);
-        String units = in.substring(in.length()-1);
-        m = 0 + Integer.parseInt(tens);
+        String units, tens;
+
+        if(in.length()>1) {
+            tens = in.substring(0, in.length() - 1);
+            units = in.substring(in.length() - 1);
+            m = 0 + Integer.parseInt(tens);
+        }
+        else {
+            units = in;
+        }
 
         if(Integer.parseInt(units) >= 5){
             m = m + 1 + (Integer.parseInt(units)%5);
