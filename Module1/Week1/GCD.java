@@ -1,22 +1,16 @@
 import java.util.*;
 
 public class GCD {
-  private static long gcd_naive(long a, long b) {
-//    int current_gcd = 1;
-//    for(int d = 2; d <= a && d <= b; ++d) {
-//      if (a % d == 0 && b % d == 0) {
-//        if (d > current_gcd) {
-//          current_gcd = d;
-//        }
-//      }
-//    }
+
+  //Method for finding gcd using Euclidean algorithm.
+  private static long euclid_gcd(long a, long b) {
 
     if(b == 0){
       return a;
     }
     else {
       long ap = a % b;
-      return gcd_naive(b, ap);
+      return euclid_gcd(b, ap);
     }
   }
 
@@ -26,10 +20,10 @@ public class GCD {
     long b = scanner.nextInt();
 
     if(a>b) {
-      System.out.println(gcd_naive(b, a));
+      System.out.println(euclid_gcd(b, a));
     }
     else {
-      System.out.println(gcd_naive(a,b));
+      System.out.println(euclid_gcd(a,b));
     }
   }
 }
