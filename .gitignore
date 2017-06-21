@@ -22,7 +22,8 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/Module1/_557e747b2146577e6cbf61df0f353dc6_02_greedy_algorithms_starter_files/fractional_knapsack/fractional_knapsack.cpp
-/Module1/_557e747b2146577e6cbf61df0f353dc6_02_greedy_algorithms_starter_files/fractional_knapsack/by_learners/
-/Module1/_557e747b2146577e6cbf61df0f353dc6_02_greedy_algorithms_starter_files/fractional_knapsack/fractional_knapsack.py
-/Module1/_557e747b2146577e6cbf61df0f353dc6_02_greedy_algorithms_starter_files/fractional_knapsack/fractional_knapsack.hs
+/Module1/**/by_learners
+/Module1/**/*.py
+/Module1/**/*.hs
+/Module1/**/*.cpp
+
