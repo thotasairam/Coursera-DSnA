@@ -7,10 +7,10 @@ public class BinarySearch {
 
         int mid = (int) Math.floor((left+right)/2);
 
-        if(left >= right){
-            return -1;
-        }else if(a[mid] == x){
+        if(a[mid] == x){
             return mid;
+        }else if(left >= right){
+            return -1;
         }else if(x > a[mid]){
             return binarySearch(a,x, mid+1,right);
         }else if (x < a[mid]){
